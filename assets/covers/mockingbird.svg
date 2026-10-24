@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#40534C"/>
+  <rect x="22" y="22" width="356" height="556" fill="none" stroke="#E8D5A3" stroke-width="3"/>
+  <text x="200" y="250" fill="#F7F3EA" font-family="Georgia, serif" font-size="24" text-anchor="middle">To Kill a</text>
+  <text x="200" y="295" fill="#F7F3EA" font-family="Georgia, serif" font-size="30" font-weight="bold" text-anchor="middle">Mockingbird</text>
+  <text x="200" y="380" fill="#E8D5A3" font-family="Georgia, serif" font-size="16" text-anchor="middle">Harper Lee</text>
+</svg>

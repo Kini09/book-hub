@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Hub | About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html">Book Hub</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu">Menu</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="books.html">Books</a>
+        <a class="active" href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section about-layout">
+    <article class="about-card">
+      <h1>About Book Hub</h1>
+      <p>Book Hub is a mini library website built for a Web Programming subject. Visitors can browse a small catalogue, filter by category, and download a sample PDF.</p>
+      <p>Before any download starts, a feedback form is required. That data is stored in a MySQL table using PHP prepared statements, which helps prevent SQL injection.</p>
+      <ul class="about-list">
+        <li>Frontend: HTML5, CSS3, vanilla JavaScript</li>
+        <li>Backend: PHP</li>
+        <li>Database: MySQL</li>
+      </ul>
+      <p>
+        Made by <br>
+        <b>Kunal 26MCA20206</b> <br>
+       <b> Ayush Ratan 26MCA20211 </b>
+      </p>
+    </article>
+
+    <article class="about-card">
+      <h2>Contact</h2>
+      <p>Have a question about the project? Send a message. This form is validated in the browser and does not write to the database.</p>
+      <form id="contact-form" novalidate>
+        <label>
+          Name
+          <input type="text" id="contact-name" name="name">
+        </label>
+        <label>
+          Email
+          <input type="email" id="contact-email" name="email">
+        </label>
+        <label>
+          Message
+          <textarea id="contact-message" name="message" rows="4"></textarea>
+        </label>
+        <p class="form-error" id="contact-error" role="alert"></p>
+        <p class="form-success" id="contact-success" role="status"></p>
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </form>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Book Hub — Web Programming mini project</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

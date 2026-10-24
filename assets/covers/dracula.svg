@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#4A1C2B"/>
+  <rect x="22" y="22" width="356" height="556" fill="none" stroke="#E8B4B4" stroke-width="3"/>
+  <text x="200" y="290" fill="#F7F3EA" font-family="Georgia, serif" font-size="36" text-anchor="middle">Dracula</text>
+  <text x="200" y="360" fill="#E8B4B4" font-family="Georgia, serif" font-size="16" text-anchor="middle">Bram Stoker</text>
+</svg>

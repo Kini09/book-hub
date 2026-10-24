@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#3D4C6F"/>
+  <rect x="22" y="22" width="356" height="556" fill="none" stroke="#E8D5A3" stroke-width="3"/>
+  <text x="200" y="260" fill="#F7F3EA" font-family="Georgia, serif" font-size="22" text-anchor="middle">The Adventures of</text>
+  <text x="200" y="300" fill="#F7F3EA" font-family="Georgia, serif" font-size="28" text-anchor="middle">Sherlock Holmes</text>
+  <text x="200" y="380" fill="#E8D5A3" font-family="Georgia, serif" font-size="16" text-anchor="middle">Arthur Conan Doyle</text>
+</svg>

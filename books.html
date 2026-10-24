@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Hub | Books</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html">Book Hub</a>
+      <button class="nav-toggle" type="button" aria-label="Open menu">Menu</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="books.html">Books</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="section-head">
+      <div>
+        <h1>All books</h1>
+        <p class="section-subtitle">Browse classic and modern titles, filter by genre, or add your own book to the catalog.</p>
+      </div>
+      <div class="head-actions">
+        <button class="btn btn-secondary js-open-add-book" id="open-add-book-btn" type="button">+ Add Book</button>
+        <form class="search-form compact" id="books-search">
+          <label class="sr-only" for="books-q">Search books</label>
+          <input id="books-q" type="search" placeholder="Search title or author">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="filters" id="category-filters">
+      <button class="chip active" type="button" data-category="all">All</button>
+      <button class="chip" type="button" data-category="Fiction">Fiction</button>
+      <button class="chip" type="button" data-category="Mystery">Mystery</button>
+      <button class="chip" type="button" data-category="Sci-Fi">Sci-Fi</button>
+      <button class="chip" type="button" data-category="Non-Fiction">Non-Fiction</button>
+      <button class="chip" type="button" data-category="Children">Children</button>
+      <button class="chip" type="button" data-category="Horror">Horror</button>
+      <button class="chip" type="button" data-category="Classics">Classics</button>
+      <button class="chip" type="button" data-category="Fantasy">Fantasy</button>
+      <button class="chip" type="button" data-category="Philosophy">Philosophy</button>
+      <button class="chip" type="button" data-category="Adventure">Adventure</button>
+    </div>
+
+    <div id="books-grid" class="book-grid"></div>
+    <p id="books-status" class="status" role="status"></p>
+  </main>
+
+  <div class="modal-overlay" id="add-book-modal" hidden>
+    <div class="modal" role="dialog" aria-labelledby="add-book-title">
+      <button class="modal-close" type="button" id="close-add-book-btn" aria-label="Close">&times;</button>
+      <h2 id="add-book-title">Add Book to Catalog</h2>
+      <p>Enter the details below to add a new title to the library catalog.</p>
+
+      <div class="cover-preview-wrap">
+        <div class="cover-preview" id="cover-preview" style="background-color: #1f3a5f;">
+          <div class="preview-inner-border">
+            <span class="preview-title" id="preview-title">Book Title</span>
+            <span class="preview-author" id="preview-author">Author Name</span>
+          </div>
+        </div>
+      </div>
+
+      <form id="add-book-form" novalidate>
+        <label>
+          Book Title
+          <input type="text" id="new-book-title" name="title" required placeholder="e.g. The Great Gatsby" maxlength="150">
+        </label>
+        <label>
+          Author
+          <input type="text" id="new-book-author" name="author" required placeholder="e.g. F. Scott Fitzgerald" maxlength="120">
+        </label>
+        <label>
+          Category
+          <input type="text" id="new-book-category" name="category" list="category-datalist" placeholder="e.g. Fiction, Sci-Fi, Fantasy" maxlength="50" required>
+          <datalist id="category-datalist">
+            <option value="Fiction">
+            <option value="Mystery">
+            <option value="Sci-Fi">
+            <option value="Non-Fiction">
+            <option value="Children">
+            <option value="Horror">
+            <option value="Classics">
+            <option value="Fantasy">
+            <option value="Philosophy">
+            <option value="Adventure">
+          </datalist>
+        </label>
+        <div>
+          <span class="palette-label">Cover Color Theme</span>
+          <div class="palette-picker" id="palette-picker">
+            <button type="button" class="palette-btn active" data-color="#1f3a5f" style="background: #1f3a5f;" aria-label="Navy"></button>
+            <button type="button" class="palette-btn" data-color="#591e23" style="background: #591e23;" aria-label="Burgundy"></button>
+            <button type="button" class="palette-btn" data-color="#2e4739" style="background: #2e4739;" aria-label="Forest Green"></button>
+            <button type="button" class="palette-btn" data-color="#38184c" style="background: #38184c;" aria-label="Royal Purple"></button>
+            <button type="button" class="palette-btn" data-color="#232b38" style="background: #232b38;" aria-label="Slate Dark"></button>
+            <button type="button" class="palette-btn" data-color="#5c2e2e" style="background: #5c2e2e;" aria-label="Terracotta"></button>
+            <button type="button" class="palette-btn" data-color="#4a3e3d" style="background: #4a3e3d;" aria-label="Espresso"></button>
+            <button type="button" class="palette-btn" data-color="#1c3144" style="background: #1c3144;" aria-label="Deep Ocean"></button>
+          </div>
+          <input type="hidden" id="new-book-color" name="cover_color" value="#1f3a5f">
+        </div>
+
+        <p class="form-error" id="add-form-error" role="alert"></p>
+        <p class="form-success" id="add-form-success" role="status"></p>
+        <button class="btn btn-primary" type="submit" id="submit-add-book">Add to Catalog</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="feedback-modal" hidden>
+    <div class="modal" role="dialog" aria-labelledby="feedback-title">
+      <button class="modal-close" type="button" aria-label="Close">&times;</button>
+      <h2 id="feedback-title">Feedback before download</h2>
+      <p>Please tell us what you think. The PDF starts only after this is saved.</p>
+      <form id="feedback-form" novalidate>
+        <input type="hidden" name="book_id" id="book-id">
+        <label>
+          Book
+          <input type="text" id="book-name" name="book_name" readonly>
+        </label>
+        <label>
+          Name
+          <input type="text" id="name" name="name" autocomplete="name">
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" name="email" autocomplete="email">
+        </label>
+        <p class="star-label">Rating</p>
+        <div class="stars" id="star-wrap" role="radiogroup" aria-label="Rating">
+          <button type="button" data-star="1" aria-label="1 star">★</button>
+          <button type="button" data-star="2" aria-label="2 stars">★</button>
+          <button type="button" data-star="3" aria-label="3 stars">★</button>
+          <button type="button" data-star="4" aria-label="4 stars">★</button>
+          <button type="button" data-star="5" aria-label="5 stars">★</button>
+        </div>
+        <input type="hidden" name="rating" id="rating" value="">
+        <label>
+          Feedback
+          <textarea id="comment" name="comment" rows="4" placeholder="What did you like about this book?"></textarea>
+        </label>
+        <p class="form-error" id="form-error" role="alert"></p>
+        <p class="form-success" id="form-success" role="status"></p>
+        <button class="btn btn-primary" type="submit" id="submit-feedback">Submit &amp; download</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Book Hub — Web Programming mini project</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

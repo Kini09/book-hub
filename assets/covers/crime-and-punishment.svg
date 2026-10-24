@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#5C2E2E"/>
+  <rect x="22" y="22" width="356" height="556" fill="none" stroke="#ECC8A8" stroke-width="3"/>
+  <text x="200" y="260" fill="#F7F3EA" font-family="Georgia, serif" font-size="26" text-anchor="middle">Crime and</text>
+  <text x="200" y="300" fill="#F7F3EA" font-family="Georgia, serif" font-size="30" font-weight="bold" text-anchor="middle">Punishment</text>
+  <text x="200" y="380" fill="#ECC8A8" font-family="Georgia, serif" font-size="16" text-anchor="middle">Fyodor Dostoevsky</text>
+</svg>

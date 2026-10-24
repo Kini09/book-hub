@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#1A3636"/>
+  <rect x="22" y="22" width="356" height="556" fill="none" stroke="#D4AF37" stroke-width="3"/>
+  <line x1="80" y1="210" x2="320" y2="210" stroke="#D4AF37" stroke-width="1.5"/>
+  <text x="200" y="270" fill="#F7F3EA" font-family="Georgia, serif" font-size="28" text-anchor="middle">The Great</text>
+  <text x="200" y="312" fill="#F7F3EA" font-family="Georgia, serif" font-size="34" font-weight="bold" text-anchor="middle">Gatsby</text>
+  <line x1="80" y1="340" x2="320" y2="340" stroke="#D4AF37" stroke-width="1.5"/>
+  <text x="200" y="390" fill="#D4AF37" font-family="Georgia, serif" font-size="16" text-anchor="middle">F. Scott Fitzgerald</text>
+</svg>

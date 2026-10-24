@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#6B3F69"/>
+  <rect x="22" y="22" width="356" height="556" fill="none" stroke="#E8D5A3" stroke-width="3"/>
+  <text x="200" y="270" fill="#F7F3EA" font-family="Georgia, serif" font-size="28" text-anchor="middle">Pride and</text>
+  <text x="200" y="308" fill="#F7F3EA" font-family="Georgia, serif" font-size="28" text-anchor="middle">Prejudice</text>
+  <text x="200" y="380" fill="#E8D5A3" font-family="Georgia, serif" font-size="16" text-anchor="middle">Jane Austen</text>
+</svg>

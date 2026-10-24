@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600" viewBox="0 0 400 600">
+  <rect width="400" height="600" fill="#2E5A3C"/>
+  <rect x="22" y="22" width="356" height="556" fill="none" stroke="#D7E3C8" stroke-width="3"/>
+  <text x="200" y="290" fill="#F7F3EA" font-family="Georgia, serif" font-size="32" text-anchor="middle">Frankenstein</text>
+  <text x="200" y="360" fill="#D7E3C8" font-family="Georgia, serif" font-size="16" text-anchor="middle">Mary Shelley</text>
+</svg>
